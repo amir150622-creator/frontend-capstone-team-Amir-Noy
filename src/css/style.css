@@ -1,0 +1,319 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --navbar-bg: #f8f9fa;
+    --footer-bg: #212529;
+    --footer-text: #ffffff;
+    --primary-color: #0d6efd;
+}
+
+
+body.dark-mode {
+    --bg-color: #212529;
+    --text-color: #f8f9fa;
+    --card-bg: #343a40;
+    --navbar-bg: #343a40;
+    --footer-bg: #000000;
+    --footer-text: #adb5bd;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark Mode Global Overrides */
+body.dark-mode .bg-light {
+    background-color: #2c3034 !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .ui-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark-mode .border {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
+
+/* --- Custom UI Components --- */
+
+/* Navigation */
+.ui-navbar {
+    background-color: var(--navbar-bg);
+    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.ui-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.ui-logo:hover {
+    color: var(--primary-color);
+}
+
+.ui-nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+    display: block;
+}
+
+.ui-nav-link:hover,
+.ui-nav-link.active {
+    color: #0b5ed7;
+    font-weight: 700;
+}
+
+
+/* Toggle */
+.ui-toggler {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Menu */
+.ui-nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .ui-toggler {
+        display: block;
+    }
+
+    .ui-nav-menu {
+        display: none;
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 1rem;
+        order: 3;
+        /* Position below logo/toggler */
+    }
+
+    .ui-nav-menu.show {
+        display: block;
+    }
+}
+
+
+/* Buttons */
+.ui-btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.ui-btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.ui-btn-primary:hover {
+    filter: brightness(1.1);
+    color: white;
+}
+
+.ui-btn-outline {
+    border-color: #0b5ed7;
+    color: #0b5ed7;
+    background: transparent;
+    border-width: 2px;
+}
+
+.ui-btn-outline:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+.ui-btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.ui-btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.ui-btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* Dark mode button fixes */
+body.dark-mode .ui-btn-outline {
+    border-color: #9ec5fe;
+    color: #9ec5fe;
+}
+
+body.dark-mode .ui-btn-outline:hover {
+    background-color: #9ec5fe;
+    color: #000;
+}
+
+
+/* Cards */
+.ui-card {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.ui-card:hover {
+    transform: translateY(-5px);
+}
+
+.ui-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.ui-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Badges */
+.ui-badge {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+
+.ui-badge-easy {
+    background-color: #1b5e20;
+    color: white;
+}
+
+.ui-badge-medium {
+    background-color: #f59f00;
+    color: black;
+}
+
+.ui-badge-hard {
+    background-color: #c62828;
+    color: white;
+}
+
+/* Alerts */
+.ui-alert {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+}
+
+.ui-alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-color: #badbcc;
+}
+
+.ui-alert-error {
+    background-color: #f8d7da;
+    color: #842029;
+    border-color: #f5c2c7;
+}
+
+.ui-alert-warning {
+    background-color: #fff3cd;
+    color: #664d03;
+    border-color: #ffecb5;
+}
+
+/* Modals / Lightbox */
+.ui-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 2rem;
+}
+
+.ui-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.ui-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode .ui-navbar {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .ui-card {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .ui-nav-link {
+    color: #f8f9fa;
+}
+
+/* Recipe Detail Specific */
+.recipe-detail-thumb {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
