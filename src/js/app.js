@@ -6,4 +6,9 @@ $(document).ready(function () {
     if ($('#featured-recipes').length > 0) {
         loadFeaturedRecipes();
     }
+
+    // Render all recipes on recipes page
+    if ($('#recipes-grid').length > 0) {
+        loadAllRecipes();
+    }
 });
