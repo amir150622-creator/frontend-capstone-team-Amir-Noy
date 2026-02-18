@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://code.jquery.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <title>All Recipes - The Bakery</title>
+    <title>My Favorites - The Bakery</title>
     <!-- CDNs Preconnect -->
     <link rel="preconnect" href="https://code.jquery.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -28,35 +28,18 @@
         <!-- Page Header -->
         <div class="bg-light py-5 mb-4">
             <div class="container text-center">
-                <h1>Our Recipes</h1>
-                <p class="lead text-muted">Browse our collection of baked goods.</p>
+                <h1>My Favorite Recipes</h1>
+                <p class="lead text-muted">Your personal collection of delicious treats.</p>
             </div>
         </div>
 
-        <!-- Filters & Search -->
-        <div class="container mb-4">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label for="search-input" class="visually-hidden">Search recipes</label>
-                    <input type="text" id="search-input" class="form-control" placeholder="Search recipes...">
+        <!-- Favorites Grid -->
+        <div class="container mb-5">
+            <div id="favorites-grid" class="row g-4">
+                <!-- Content loaded via JS -->
+                <div class="col-12 text-center">
+                    <p class="text-primary">Loading favorites...</p>
                 </div>
-                <div class="col-md-3">
-                    <label for="difficulty-filter" class="visually-hidden">Filter by difficulty</label>
-                    <select id="difficulty-filter" class="form-select">
-                        <option value="all">All Difficulties</option>
-                        <option value="Easy">Easy</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Hard">Hard</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <button id="reset-filters" class="ui-btn ui-btn-outline w-100 rounded-pill py-2">Reset</button>
-                </div>
-            </div>
-
-            <!-- Recipes Grid -->
-            <div id="recipes-grid" class="row">
-                <!-- Recipes will be loaded here -->
             </div>
         </div>
     </main>
@@ -64,9 +47,6 @@
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>

@@ -45,7 +45,7 @@ function loadFavorites() {
     }
 
     $.getJSON(API_URL, function (recipes) {
-        const favoriteRecipes = recipes.filter(r => favorites.includes(r.id));
+        const favoriteRecipes = recipes.filter(r => favorites.includes(Number(r.id)));
         grid.empty();
         favoriteRecipes.forEach(function (recipe) {
             const card = renderRecipeCard(recipe);
