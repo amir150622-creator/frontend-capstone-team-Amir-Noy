@@ -15,6 +15,9 @@ function loadNavbar() {
             <nav class="ui-nav-menu" id="nav-menu">
                 <ul class="d-flex flex-column flex-lg-row list-unstyled mb-0 w-100">
                     ${navbarLinks.map(link => `<li><a class="ui-nav-link" href="${link.href}">${link.text}</a></li>`).join('')}
+                    <li class="ms-lg-3 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="ui-btn ui-btn-outline ui-btn-sm w-100">Theme</button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -35,6 +38,8 @@ function loadNavbar() {
             }
         });
 
-        // NO initThemeToggle() here to avoid crashes in early steps
+        if (typeof initThemeToggle === 'function') {
+            initThemeToggle();
+        }
     }
 }

@@ -8,7 +8,6 @@
     --primary-color: #0d6efd;
 }
 
-
 body.dark-mode {
     --bg-color: #212529;
     --text-color: #f8f9fa;
@@ -16,6 +15,10 @@ body.dark-mode {
     --navbar-bg: #343a40;
     --footer-bg: #000000;
     --footer-text: #adb5bd;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -46,9 +49,6 @@ body.dark-mode .ui-card {
 body.dark-mode .border {
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
-
-
-
 
 /* --- Custom UI Components --- */
 
@@ -86,7 +86,6 @@ body.dark-mode .border {
     font-weight: 700;
 }
 
-
 /* Toggle */
 .ui-toggler {
     background: none;
@@ -115,14 +114,12 @@ body.dark-mode .border {
         width: 100%;
         margin-top: 1rem;
         order: 3;
-        /* Position below logo/toggler */
     }
 
     .ui-nav-menu.show {
         display: block;
     }
 }
-
 
 /* Buttons */
 .ui-btn {
@@ -184,7 +181,6 @@ body.dark-mode .ui-btn-outline:hover {
     background-color: #9ec5fe;
     color: #000;
 }
-
 
 /* Cards */
 .ui-card {
