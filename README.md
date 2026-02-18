@@ -27,7 +27,7 @@
 
 ## קישור לאתר חי
 ניתן לצפות בפרויקט בכתובת הבאה:
-[The Bakery Live Site](https://amir150622-creator.github.io/frontend-capstone-team-Amir-Noy/recipes.html)
+[The Bakery Live Site](https://amir150622-creator.github.io/frontend-capstone-team-Amir-Noy/)
 
 ---
 **פותח על ידי: נוי נהון ואמיר שחר**
